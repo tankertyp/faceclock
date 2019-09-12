@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 添加设备(先扫描再添加) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <TextView android:id="@+id/item_device_name"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:layout_gravity="center|start"
+            android:ellipsize="marquee"
+            android:text="DeviceName"
+            android:textSize="20sp"/>
+
+        <TextView android:id="@+id/item_device_address"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:singleLine ="true"
+            android:ellipsize="marquee"
+            android:text="FF:FF:FF:FF:FF:FF"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/item_device_status"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Connected"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 头像栏 -->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_option_item"
+            android:gravity="center_vertical"
+            android:paddingEnd="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="6dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/header_pic"
+                android:textColor="@color/main_blue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivHeader"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/default_header" />
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.lqr.optionitemview.OptionItemView
+            android:id="@+id/oivName"
+            style="@style/OptionItem"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_option_item"
+            app:left_text="昵称"
+            app:left_text_color="@color/main_blue"
+            app:left_text_margin_left="18dp"
+            app:left_text_size="16sp"
+            app:right_text="万物皆可盘"
+            app:right_text_color="@color/black0"
+            app:right_text_margin_right="10dp"
+            app:right_text_size="16sp"
+            app:right_src="@mipmap/ic_more_arrow"/>
+
+
+
+        <com.lqr.optionitemview.OptionItemView
+            android:id="@+id/oivAccount"
+            style="@style/OptionItem"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_option_item"
+            app:left_text="@string/phone"
+            app:left_text_color="@color/main_blue"
+            app:left_text_margin_left="18dp"
+            app:left_text_size="16sp"
+            app:right_src="@mipmap/ic_more_arrow"/>
+
+
+
+        <com.lqr.optionitemview.OptionItemView
+            android:id="@+id/oivPassword"
+            style="@style/OptionItem"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/selector_option_item"
+            app:left_text="@string/password"
+            app:left_text_color="@color/main_blue"
+            app:left_text_margin_left="18dp"
+            app:left_text_size="16sp"
+            app:right_src="@mipmap/ic_more_arrow"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

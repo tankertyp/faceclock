@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:gravity="center"
+        android:text="修改手机号码"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_dialog_input"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入新手机号码"
+        android:padding="20dp"
+
+        />
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+
+        />
+    <com.zhy.autoLinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dialog_no"
+            android:padding="20dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_dialog_yes"
+            android:padding="20dp"
+            android:text="确定"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </com.zhy.autoLinearLayout>
+</com.zhy.autoLinearLayout>

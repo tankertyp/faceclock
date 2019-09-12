@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.60'
+
+    repositories {
+        //google()
+        jcenter()
+        //google()   // 代码托管仓库
+        maven {
+            url 'http://www.idescout.com/maven/repo/'
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.7.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // about bluetooth
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        //google()
+        jcenter()
+        google()
+        maven {
+            //url "https://jitpack.io"
+            //url 'https://maven.google.com'
+            //name 'Google'
+            url 'http://www.idescout.com/maven/repo/'
+        }
+    }
+}
+
+//运行gradle clean时，执行此处定义的task。
+// 该任务继承自Delete，删除根目录中的build目录。
+// 相当于执行Delete.delete(rootProject.buildDir)
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

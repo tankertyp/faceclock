@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/home_title"
+        android:textColor="@color/main_blue"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnAddDevice"
+        android:background="@drawable/shape_round_button"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:drawableStart="@mipmap/ic_add_device"
+        android:paddingStart="64dp"
+        android:gravity="center_vertical"
+        android:text="@string/add_device"
+        android:textColor="@color/main_blue"
+        android:textSize="18sp"
+        android:drawablePadding="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnUploadFace"
+        android:background="@drawable/shape_round_button"
+        android:layout_width="300dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:drawableStart="@mipmap/ic_upload_face"
+        android:paddingStart="78dp"
+        android:gravity="center_vertical"
+        android:text="@string/upload_face"
+        android:textColor="@color/main_blue"
+        android:textSize="18sp"
+        android:drawablePadding="15dp"/>
+
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMusicMode"
+            android:background="@drawable/shape_round_button"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:paddingTop="15dp"
+            android:drawableTop="@mipmap/ic_music_mode"
+            android:text="@string/music_mode"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/btnAlarmClockMode"
+            android:background="@drawable/shape_round_button"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"
+            android:paddingTop="15dp"
+            android:drawableTop="@mipmap/ic_alarm_clock_mode"
+            android:text="@string/alarm_clock_mode"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp"/>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

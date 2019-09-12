@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/record_delete_batch_llyt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout style="@style/action_llyt">
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            style="@style/action_icon"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            app:srcCompat="@mipmap/ic_action_cancel"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/action_title"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/btnSelectAll"
+                style="@style/action_tv"
+                android:text="@string/select_all"/>
+
+            <TextView
+                android:id="@+id/btnSelectNone"
+                style="@style/action_tv"
+                android:text="@string/select_all_cancel"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background_color"
+        android:orientation="vertical">
+
+        <com.lqr.recyclerview.LQRRecyclerView
+            android:id="@+id/rvRecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rv_divider_color="@color/line"
+            app:rv_divider_size="1px"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/single_btn"
+            android:background="@drawable/shape_circle_btn_sure_invalidate"
+            android:text="@string/delete"/>
+    </LinearLayout>
+
+</LinearLayout>

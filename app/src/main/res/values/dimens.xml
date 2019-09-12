@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--主界面底部图标大小-->
+    <dimen name="main_bottom_iv_horizontal_size">58dp</dimen>
+    <dimen name="main_bottom_iv_vertical_size">54dp</dimen>
+
+    <!--列表item间距-->
+    <dimen name="item_margin_left_and_right">25dp</dimen>
+    <dimen name="item_margin_top_and_bottom">15dp</dimen>
+
+    <!--选项间距-->
+    <dimen name="option_item_margin_top">20dp</dimen>
+    <dimen name="option_item_margin_left">30dp</dimen>
+    <dimen name="option_item_margin_right">30dp</dimen>
+
+    <dimen name="divider_line_thin">0.5dp</dimen>
+    <dimen name="divider_line_thick">1dp</dimen>
+    <dimen name="list_view_margin">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="border_margin">19dp</dimen>
+
+    <dimen name="font_12">12.0dip</dimen>
+    <dimen name="font_16">16.0dip</dimen>
+    <dimen name="font_18">18.0dip</dimen>
+
+    <dimen name="lay_12">12.0dip</dimen>
+    <dimen name="lay_16">16.0dip</dimen>
+
+</resources>

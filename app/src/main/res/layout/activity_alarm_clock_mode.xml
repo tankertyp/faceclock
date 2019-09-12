@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/alarm_clock_empty_tip"
+            android:textColor="@color/main_blue"
+            android:textSize="20sp" />
+
+    <!--界面闹钟纵向列表-->
+    <com.lqr.recyclerview.LQRRecyclerView
+        android:id="@+id/rvAlarmClockList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAlarmClockNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="40dp"
+        android:src="@mipmap/ic_fab"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:elevation="6dp"
+        app:layout_anchor="@id/rvAlarmClockList"
+        app:layout_anchorGravity="bottom|right"
+        app:rippleColor="@color/main_blue" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/popupWindowDelete"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:visibility="gone">
+        <TextView
+            android:layout_marginTop="1dp"
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:textColor="#FF4081"
+            android:text="删除"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:layout_height="100dp" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>
+
+

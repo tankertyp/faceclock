@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/me"
+        android:textColor="@color/main_blue"
+        android:textSize="26sp" />
+
+    <!-- 个人信息栏-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/llMyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_option_item"
+        android:gravity="center_vertical"
+        android:paddingStart="6dp">
+
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="@dimen/option_item_margin_right"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/default_header"/>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:singleLine="true"
+                android:text="@string/name"
+                android:textColor="@color/gray0"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:singleLine="true"
+                android:text="账号: faceclock9527"
+                android:textColor="@color/gray0"
+                android:textSize="18sp"/>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@mipmap/ic_more_arrow"
+            android:contentDescription="TODO" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivInstruction"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_option_item"
+        android:clickable="true"
+        app:left_image_margin_left="15dp"
+        app:left_image_margin_right="10dp"
+        app:left_src="@drawable/ic_instruction"
+        app:left_text="@string/instruction"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="20sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivMessage"
+        style="@style/OptionItem"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_option_item"
+        android:clickable="true"
+        app:left_image_margin_left="15dp"
+        app:left_image_margin_right="10dp"
+        app:left_src="@drawable/ic_message"
+        app:left_text="@string/message"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="20sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivLogout"
+        style="@style/OptionItem"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:background="@drawable/selector_option_item"
+        android:clickable="true"
+        app:title="@string/logout"
+        app:title_color="@color/colorPrimaryBlue"
+        app:title_size="24sp"/>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

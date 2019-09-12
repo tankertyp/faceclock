@@ -1,0 +1,313 @@
+<resources>
+    <string name="app_name">faceclock</string>
+    <string name="version">0.0.0</string>
+    <string name="welcome">欢迎使用FaceClock！</string>
+
+    <string name="error_code">异常码：</string>
+    <string name="please_check_net">请检查网络</string>
+    <string name="network_unavailable">网络连接失败</string>
+    <string name="disconnect_server">与服务器断开连接</string>
+    <string name="disconnect_bluetooth">与Nanopi M4蓝牙断开连接</string>
+    <string name="weather_request_fail">请求天气数据出错，请检查网络</string>
+    <string name="load_error">加载失败</string>
+    <string name="please_wait">请稍等</string>
+    <string name="content_no_empty">内容不能为空</string>
+    <string name="complete">完成</string>
+    <string name="change_success">修改成功</string>
+    <string name="change_fail">修改失败</string>
+    <string name="set_success">设置成功</string>
+    <string name="set_fail">设置失败</string>
+    <string name="send">发送</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+    <string name="please_waiting_while_sending_data">正在发送其它数据,请稍后再发…</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="confirm_with_count">确定(%1$d)</string>
+    <string name="save_to_phone">保存至手机</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 欢迎页-->
+    <string name="welcome_tips">Welcome to FaceClock!</string>
+
+    <!-- 底部导航栏 -->
+    <string name="home">首页</string>
+    <string name="discovery">发现</string>
+    <string name="me">我</string>
+
+    <string name="press_again_to_exit">再按一次退出FaceClock</string>
+
+    <!-- 登录 -->
+    <string name="your_account">您的登录账号</string>
+    <string name="your_password">您的登录密码</string>
+    <string name="email">您的电子邮箱</string>
+    <string name="password_forgotten">忘记密码？</string>
+    <string name="account_empty">用户名为空，请重新输入！</string>
+    <string name="phone_format_error">手机格式有误</string>
+    <string name="email_format_error">邮箱格式有误</string>
+    <string name="password_not_empty">密码为空，请重新输入！</string>
+    <string name="login_success">登陆成功！</string>
+    <string name="login_error">登陆错误！</string>
+    <string name="login_fail">登录失败！请输入正确的用户名与密码！</string>
+
+    <!-- 注册 -->
+    <string name="area">国家/地区</string>
+    <string name="china">中国</string>
+    <string name="register">注册账户</string>
+    <string name="register_error">注册错误</string>
+    <string name="phone_not_empty">电话为空，请重新输入！</string>
+    <string name="phone_not_available">手机号不可用</string>
+    <string name="email_not_available">电子邮箱不可用</string>
+    <string name="your_email">你的电子邮箱</string>
+    <string name="email_not_empty">邮箱为空，请重新输入！</string>
+    <string name="name_not_empty">用户名为空，请重新输入！</string>
+    <string name="name_already_exist">用户名已存在，请重新输入！</string>
+    <string name="verification_code">验证码</string>
+    <string name="send_code_btn_normal_tip">发送验证码</string>
+    <string name="send_code_error">发送验证码失败</string>
+    <string name="vertify_code_error">验证码错误</string>
+    <string name="please_input_verification_code">请输入验证码</string>
+    <string name="vertify_code_not_empty">验证码为空，请输入正确的验证码</string>
+    <string name="pwd_not_the_same">密码确认不正确，请重新输入密码！</string>
+    <string name="register_fail">注册用户失败，请重新尝试！</string>
+    <string name="register_success">注册成功！</string>
+
+
+    <!-- 首页 -->
+    <string name="home_title">首页</string>
+    <string name="add_device">添加设备</string>
+    <string name="upload_face">人脸录入</string>
+    <string name="music_mode">音乐模式</string>
+    <string name="alarm_clock_mode">闹钟模式</string>
+
+    <!-- 发现 -->
+    <string name="discovery_title">发现</string>
+    <string name="scan">扫一扫</string>
+    <string name="cpuinfo">CPU状态</string>
+    <string name="meminfo">内存状态</string>
+    <string name="tempinfo">温度</string>
+    <string name="city">城市</string>
+    <string name="beijing">北京</string>
+
+
+
+    <!--扫一扫-->
+    <string name="scan_code">扫码</string>
+    <string name="cover">封面</string>
+    <string name="street_scape">街景</string>
+    <string name="translate">翻译</string>
+    <string name="qr_cord_or_bar_code">二维码/条码</string>
+    <string name="cover_or_movie_poster">封面/电影海报</string>
+    <string name="select_qr_code_from_ablum">从相册选取二维码</string>
+    <string name="scan_fail">扫描失败</string>
+    <string name="open_camera_error">打开相机出错</string>
+    <string name="this_account_was_your_friend">该用户已经是您的好友</string>
+    <string name="you_already_in_this_group">您已经在群聊中</string>
+    <string name="select_group_info_fail_please_restart_app">已加入群聊，但查询群信息失败，请重启APP</string>
+    <string name="join_group_fail">入群失败</string>
+
+    <!--附言界面-->
+    <string name="postscript_tip">你需要发送验证申请，等对方通过</string>
+    <string name="disallow_it_see_my_circle">不让他(她)看我的朋友圈</string>
+    <string name="request_sent_success">请求已发送</string>
+    <string name="request_sent_fail">请求发送失败</string>
+
+    <!--添加蓝牙设备-->
+    <string name="bluetooth_not_supported">当前设备不支持蓝牙</string>
+    <string name="bluetooth_on">蓝牙开</string>
+    <string name="bluetooth_off">蓝牙关</string>
+    <string name="open_bluetooth_success">成功打开蓝牙！</string>
+    <string name="open_bluetooth_fail">打开蓝牙失败！</string>
+    <string name="add_device_tips">点击设备项开始配对，再点击取消配对</string>
+    <string name="device_name">蓝牙设备名称</string>
+    <string name="device_address">蓝牙设备地址</string>
+    <string name="device_state">蓝牙设备状态</string>
+    <string name="connection_start">蓝牙设备状态</string>
+    <string name="start_search">开始搜索周围的蓝牙设备</string>
+    <string name="open_search">打开搜索得到的蓝牙设备</string>
+    <string name="search_device">搜索设备</string>
+    <string name="start_discover_device">开始扫描设备</string>
+    <string name="no_found_device">附近没有发现蓝牙设备！</string>
+    <string name="add_device_loading">添加设备中…</string>
+    <string name="add_device_fail">添加设备失败！</string>
+    <string name="add_device_success">添加设备失败！</string>
+    <string name="connect_device_fail">连接设备失败</string>
+    <string name="already_connected">蓝牙已经连接</string>
+    <string name="please_add_device">请先在“首页-添加设备”中连接Nanopi M4设备</string>
+    <string name="send_message">发送消息</string>
+    <string name="device_unknown">Unknown</string>
+
+    <!-- new bluetooth-->
+    <string name="bonded_device">已配对设备</string>
+    <string name="new_device">新的设备</string>
+    <string name="connected">已连接</string>
+    <string name="action_setting">设置</string>
+    <string name="action_send">发送数据</string>
+    <string name="action_send_data">请输入待发送的数据</string>
+    <string name="action_scan">搜索设备</string>
+    <string name="action_select">选择一个连接设备</string>
+    <string name="action_device_name">未连接</string>
+
+
+    <string name="trace_start">人脸跟随启动</string>
+    <string name="trace_stop">人脸跟随关闭</string>
+
+    <string name="my_face">我的人脸库</string>
+
+    <string name="press_right_top">按右上的  </string>
+
+
+    <!--闹钟模式-->
+    <string name="select_all">全选</string>
+    <string name="select_all_not">全不选</string>
+    <string name="alarm_clock_empty_tip">快来添加自己的闹钟吧~~~</string>
+
+
+    <!-- 新建闹钟 -->
+    <string name="alarm_clock_new">新建闹钟</string>
+    <string name="tag">标签</string>
+    <string name="volume">音量</string>
+    <string name="repeat">重复</string>
+    <string name="repeat_once">重复一次</string>
+    <string name="ring">铃声</string>
+    <string name="default_ring">默认铃声</string>
+    <string name="done">完成</string>
+
+    <!-- 删除闹钟 -->
+    <string name="select_alarm_clock">选择闹钟</string>
+
+    <!-- 铃声选择界面 -->
+    <string name="upload_clock_music">上传闹钟铃声</string>
+    <string name="ring_select">铃声选择</string>
+    <string name="no_system_ring_file">没有系统铃声文件</string>
+    <string name="no_local_music_file">没有本地音乐文件</string>
+    <string name="no_record_file">没有录音文件</string>
+    <string name="save">保存</string>
+    <string name="nanopi_music">FaceClock铃声</string>
+    <string name="local_music">上传本地音乐</string>
+    <string name="no_ring">无铃声</string>
+    <string name="no_sd_card">无存储设备</string>
+    <string name="this_ring_cannot_be_played">当前歌曲无法播放</string>
+    <string name="headset_pluged_out">耳机被拔出</string>
+    <string name="confirm_delete">确认删除</string>
+
+
+    <string name="countdown_day_hour_minute">距闹钟响起还有%1$d天%2$d小时%3$d分</string>
+    <string name="countdown_hour_minute">距闹钟响起还有%1$d小时%2$d分</string>
+    <string name="countdown_minute">距闹钟响起还有%1$d分钟</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+    <string name="one_h">一</string>
+    <string name="two_h">二</string>
+    <string name="three_h">三</string>
+    <string name="four_h">四</string>
+    <string name="five_h">五</string>
+    <string name="six_h">六</string>
+    <string name="day">日</string>
+    <string name="every_day">每天</string>
+    <string name="week_day">平日</string>
+    <string name="week_end">周末</string>
+    <string name="week">周</string>
+    <string name="caesura">、</string>
+
+    <string name="alarm_clock">第一个闹钟</string>
+
+    <!-- 录音 -->
+    <string name="zero_zero">00:00</string>
+    <string name="click_record">点击录音</string>
+    <string name="click_stop">点击结束</string>
+    <string name="record_file_name">/录音%1$s.amr</string>
+    <string name="error_delete_fail">删除失败</string>
+    <string name="record_fail">录音失败</string>
+    <string name="record_fail_confirm">录音失败，请检查录音权限是否开启或录音已被其他应用占用。</string>
+    <!-- 录音操作 -->
+    <string name="rename">重命名</string>
+    <string name="delete">删除</string>
+    <string name="delete_batch">批量删除</string>
+    <string name="detail">详情</string>
+    <!-- 录音详情画面 -->
+    <string name="file_name">文件名称：</string>
+    <string name="file_format">文件格式：</string>
+    <string name="file_size">文件大小：</string>
+    <string name="alter_time">修改时间：</string>
+    <string name="play_duration">播放时长：</string>
+    <string name="save_path">保存路径：</string>
+    <string name="unknown">未知</string>
+    <string name="amr">amr</string>
+
+    <!-- 录音重命名画面 -->
+    <string name="rename_success">重命名成功</string>
+    <string name="file_name_exist">文件名已存在</string>
+    <string name="input_empty">输入内容为空</string>
+    <!-- 录音删除画面 -->
+    <string name="sure_delete">确定要删除吗？</string>
+    <string name="selected_xx_item">已选择%1$d项</string>
+    <string name="delete_success">删除成功</string>
+    <!-- 录音批量删除画面 -->
+    <string name="select_all_cancel">取消全选</string>
+
+    <!-- 音频播放 -->
+    <string name="play_fail">播放失败</string>
+
+    <!--计时-->
+    <string name="roger">知道了</string>
+    <string name="timer_on_time">计时器时间到了！</string>
+
+
+    <!-- 音乐模式 -->
+    <string name="trace_on">启动跟随</string>
+    <string name="trace_off">关闭跟随</string>
+
+
+    <!-- 我 -->
+    <string name="btn_click_login">登录</string>
+    <string name="btn_click_set">个人信息维护</string>
+    <string name="my_account">账号:%1$s</string>
+    <string name="instruction">使用说明</string>
+    <string name="message">消息中心</string>
+    <string name="name">万物皆可盘</string>
+    <string name="logout">退出登录</string>
+    <string name="exit_account">退出当前账号</string>
+    <string name="exit_app">关闭FaceClock</string>
+
+    <!--使用说明-->
+    <string name="instruction_title">FaceClock使用说明</string>
+    <string name="timestamp">2019/5/24 21:42:16</string>
+    <string name="instruction_txt0">FaceClock手机闹钟功能采用蓝牙连接模式:</string>
+    <string name="instruction_txt1">1.进行登录注册以及修改个人信息时需要保证手机使用数据流量或连接wifi。</string>
+    <string name="instruction_txt2">2.首次使用时，需添加设备和绑定设备Ugreen-40759,用户需要允许开启蓝牙的权限</string>
+    <string name="instruction_txt3">3.不同的手机系统在日常使用过程中会出现蓝牙连接错乱的情况，届时将无法正常连接蓝牙硬件，重启蓝牙和重启Nanopi M4将能改善这种情况</string>
+
+
+    <string name="btn_click_save">保存</string>
+
+    <!-- 个人信息 -->
+    <string name="my_info">我的信息</string>
+    <string name="header_pic">头像</string>
+    <string name="phone">电话号码</string>
+    <string name="password">登录密码</string>
+
+    <!-- 修改昵称 -->
+    <string name="change_name">修改昵称。</string>
+    <string name="change_name_tip">请输入你的新昵称。</string>
+
+    <!--修改登录密码-->
+    <string name="reset_password">设置密码</string>
+    <string name="old_password">原密码</string>
+    <string name="new_password">新密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="reset_password_tip">密码必须是XXX</string>
+    <string name="please_input_old_password">请输入原始密码</string>
+    <string name="original_password_not_same">输入的密码与原始密码不一致</string>
+    <string name="please_input_new_password">请输入新密码</string>
+    <string name="please_input_new_password_again">请再次输入新密码</string>
+    <string name="new_password_not_same">两次输入的新密码不一致</string>
+</resources>

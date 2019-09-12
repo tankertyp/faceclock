@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 新版登录模块-->
+    <color name="login_line_color">#dededf</color>
+    <color name="login_input_active">#31b968</color>
+    <color name="login_other_color">#cacaca</color>
+    <color name="account_input_bg_color">#D9D9D9</color>
+    <color name="account_lock_bg">#ff43815c</color>
+    <color name="account_lock_font_color">#FF68997C</color>
+    <color name="account_input_color">#c9c9c9</color>
+    <color name="account_pressed_true">#14b94d</color>
+
+    <color name="bg_press">#ebebeb</color>
+    <color name="bg_press_material">#d4d4d4</color>
+
+    <color name="black">#ff000000</color>
+    <color name="grey">#eeeeee</color>
+    <color name="dark_grey">#888888</color>
+    <color name="blue">#2DCD70</color>
+    <color name="gold">#ffffd700</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#99000000</color>
+
+
+    <color name="bg_black">#000000</color>
+    <color name="bg_white">#FFFFFF</color>
+
+    <color name="bg_home">#F0F1FA</color>
+    <color name="bg_discover">#F0F1FA</color>
+    <color name="bg_mine">#F0F1FA</color>
+
+    <color name="bg_alarm_clock_list_item">#F0F1FA</color>
+
+    <color name="bg_gray">#00F1F1F1</color>
+    <color name="gray_divider_line">#DDDDDD</color>
+    <color name="darkgray">#A9A9A9</color>
+
+
+    <color name="text_gray">#8D7A71</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_yellow">#FFC800</color>
+
+
+    <color name="div_white">#E5E5E5</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryBlue">#4957B8</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="line_bg">#e5e5e5</color>
+
+    <color name="gray_light">#f2f2f2</color>
+    <color name="gray_light_d">#dfdfdf</color>
+    <color name="blue_light">#dae4f2</color>
+    <color name="blue_light_d">#c0d4f1</color>
+    <color name="lightblue">#d228a4e9</color>
+
+    <color name="white_trans10">#1affffff</color>
+    <!-- 白色:10 -->
+    <color name="white_trans20">#33ffffff</color>
+    <!-- 白色:20 -->
+    <color name="white_trans30">#4dffffff</color>
+    <!-- 白色:30 -->
+    <color name="white_trans40">#66ffffff</color>
+    <!-- 白色:40 -->
+    <color name="white_trans50">#80FFFFFF</color>
+    <!-- 白色:60 -->
+    <color name="white_trans60">#99FFFFFF</color>
+    <!-- 白色:60 -->
+    <color name="white_trans90">#e6ffffff</color>
+    <!-- 白色:90 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 白色 -->
+
+    <!-- 红色 -->
+    <color name="red">#E6FF0000</color>
+
+
+    <color name="gray0">#464646</color>
+    <color name="gray1">#7e7e7e</color>
+    <color name="gray2">#969696</color>
+    <color name="gray3">#c8969696</color>
+    <color name="gray4">#F5F5F5</color>
+    <color name="gray5">#EBEBEB</color>
+    <color name="gray6">#FBFBFB</color>
+    <color name="gray7">#999999</color>
+    <color name="gray8">#D9D9D9</color>
+    <color name="gray9">#DBDFE0</color>
+
+
+    <color name="green0">#45C01A</color>
+    <color name="green1">#45C01A</color>
+    <color name="green2">#A3DEA3</color>
+    <color name="green3">#1AAD19</color>
+
+    <color name="blue0">#576B95</color>
+    <color name="blue1">#576B95</color>
+    <color name="blue2">#c0d4f1</color>
+    <color name="main_blue">#4957b8</color>
+    <color name="dark_blue">#4957B8</color>
+    <!-- 深蓝色:文字焦点25 -->
+    <color name="dark_blue_focus">#403F51B5</color>
+    <!-- 深蓝色:toggleBtn -->
+    <color name="blue_tog_btn">#c0d4f1</color>
+    <!-- 深蓝色:确定按钮不可用60 -->
+    <color name="dark_blue_invalidate">#993F51B5</color>
+    <!-- 深蓝色:toggleBtn按下 -->
+    <color name="blue_tog_btn_pressed">#4957B8</color>
+    <!-- 深蓝色:确定按钮按下 -->
+    <color name="dark_blue_button_pressed">#303F9F</color>
+
+
+
+
+
+    <color name="line">#D2D2D2</color>
+
+    <!-- 灰色1 -->
+    <color name="gray_background_color">#F4F4F4</color>
+    <!-- 灰色4 -->
+    <color name="gray_seekbar">#C0C0C0</color>
+
+    <!-- 深灰色:取消按钮 -->
+    <color name="dark_gray">#989898</color>
+    <color name="dark_gray_button_pressed">#808080</color>
+    <!-- 深灰色:取消按钮按下 -->
+
+
+
+
+    <color name="black0">#000000</color>
+    <color name="black1">#99000000</color>
+    <color name="black_text_normal_common">#4B4B4B</color>
+
+    <color name="black_trans10">#1a000000</color>
+    <!-- 黑色: 10 -->
+    <color name="black_trans15">#26000000</color>
+    <!-- 黑色: 15 -->
+    <color name="black_trans20">#33000000</color>
+    <!-- 黑色: 20 -->
+    <color name="black_trans25">#40000000</color>
+    <!-- 黑色: 25 -->
+    <color name="black_trans30">#4d000000</color>
+    <!-- 黑色: 30 -->
+    <color name="black_trans40">#66000000</color>
+    <!-- 黑色: 40 -->
+    <color name="black_trans50">#80000000</color>
+    <!-- 黑色: 50 -->
+    <color name="black_trans60">#99000000</color>
+    <!-- 黑色：60 -->
+    <color name="black_trans70">#b3000000</color>
+    <!-- 黑色：70 -->
+    <color name="black_trans80">#CC000000</color>
+    <!-- 黑色：80 -->
+    <color name="black_trans90">#E6000000</color>
+    <!-- 黑色：90 -->
+
+
+    <color name="fab_colorNormal">#FF4081</color>
+    <color name="fab_colorPressed">#E75043</color>
+    <color name="fab_colorRipple">#99FFFFFF</color>
+
+
+    <color name="colorGray">#f25f5f5f</color>
+    <color name="colorBg">#f2f1f1f1</color>
+    <color name="colorSelect">#f2c5c5c5</color>
+
+
+
+
+
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical"
+    tools:ignore="ScrollViewCount">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_option_item"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/lightblue"
+                app:cardCornerRadius="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FaceClock自我介绍"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我是一款基于人脸识别的智能闹钟,用于拯救重度懒床患者，并且会在您醒来的第一时间只对您进行定向放音哟，不干扰到周围其他人"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/lightblue"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/instruction_title"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timestamp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/lightblue"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@string/instruction_txt0"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instruction_txt1"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instruction_txt2"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instruction_txt3"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/selector_option_item"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_imageview_border"
+                android:padding="3dp"
+                app:srcCompat="@mipmap/nanopi_m4" />
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_imageview_border"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/openmv" />
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_imageview_border"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/bt_audio_adapter" />
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_imageview_border"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/img_instruction_3" />
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_imageview_border"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/img_instruction_4" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+
+

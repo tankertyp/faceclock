@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/discovery"
+        android:textColor="@color/main_blue"
+        android:textSize="26sp" />
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivCpu"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_option_item"
+        app:left_image_margin_left="20dp"
+        app:left_image_margin_right="15dp"
+        app:left_src="@mipmap/ic_cpu_info"
+        app:left_text="@string/cpuinfo"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="18sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivMem"
+        style="@style/OptionItem"
+        android:background="@drawable/selector_option_item"
+        android:layout_marginTop="2dp"
+        app:left_image_margin_left="20dp"
+        app:left_image_margin_right="15dp"
+        app:left_src="@mipmap/ic_mem_info"
+        app:left_text="@string/meminfo"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="18sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivTemp"
+        style="@style/OptionItem"
+        android:background="@drawable/selector_option_item"
+        android:layout_marginTop="2dp"
+        app:left_image_margin_left="20dp"
+        app:left_image_margin_right="15dp"
+        app:left_src="@mipmap/ic_temp_info"
+        app:left_text="@string/tempinfo"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="18sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+
+
+    <!-- 更换城市-->
+    <LinearLayout
+        android:id="@+id/ll_change_city"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_option_item">
+        <TextView
+            style="@style/MenuTextTitle"
+            android:drawableStart="@mipmap/icon_city"
+            android:layout_marginStart="10dp"
+            android:text="更换城市"
+            android:textColor="@color/main_blue"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_current_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="#eb4f38"
+            android:text="北京"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ic_more_arrow"
+            android:layout_marginEnd="4dp"/>
+
+    </LinearLayout>
+
+
+    <com.lqr.optionitemview.OptionItemView
+        android:id="@+id/oivScan"
+        style="@style/OptionItem"
+        android:background="@drawable/selector_option_item"
+        android:layout_marginTop="20dp"
+        app:left_image_margin_left="20dp"
+        app:left_image_margin_right="15dp"
+        app:left_src="@mipmap/ic_scan"
+        app:left_text="@string/scan"
+        app:left_text_color="@color/main_blue"
+        app:left_text_size="18sp"
+        app:right_src="@mipmap/ic_more_arrow"/>
+
+</com.zhy.autolayout.AutoLinearLayout>
+

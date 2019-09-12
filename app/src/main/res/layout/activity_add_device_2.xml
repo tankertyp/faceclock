@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.AddDeviceActivity2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/already_connected"
+        android:textColor="@color/main_blue"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/lvConnectedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarButtonStyle">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_search"
+            android:textColor="@color/main_blue"
+            android:id="@+id/btnStartSearch"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_search"
+            android:textColor="@color/main_blue"
+            android:id="@+id/btnOpenSearch"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_message"
+            android:textColor="@color/main_blue"
+            android:id="@+id/btnSendMessage"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/search_device"
+        android:textColor="@color/main_blue"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/lvSearchDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

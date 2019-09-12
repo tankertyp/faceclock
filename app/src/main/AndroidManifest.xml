@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pingfly.faceclock">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- 获取机型信息权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 需要硬件支持低功耗蓝牙 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--在 Android 6.0 及以上，还需要打开位置权限。如果应用没有位置权限，蓝牙扫描功能不能使用-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <uses-feature android:name="android.hardware.location.gps" />
+    <!-- 调用摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 读取本地文件权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 写入本地文件权限 -->
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 添加控制振动器的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 为了让JobScheduler可以在6.0以上进入Doze模式工作，这里针对6.0以上的Doze模式做特殊的处理-忽略电池的优化-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+
+
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+
+        <!-- imlib config begin -->
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="k51hidwqk4x9b" />
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:exported="true"
+            android:process=":ipc"
+            android:permission="" />
+
+        <!--
+        <service
+            android:name="io.rong.imlib.ReConnectService"
+            android:exported="true" />
+        -->
+
+        <receiver
+            android:name="io.rong.imlib.ConnectChangeReceiver"
+            android:exported="true"
+            android:permission="" />
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+        <!-- imlib config end -->
+
+
+        <!--必选： SDK 核心功能-->
+        <!--第三方相关,向第三方推送服务请求 token 的服务 -->
+        <!--
+        <service
+            android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        -->
+
+        <!-- 处理 push 消息相关的服务 -->
+        <!--
+        <service
+            android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        -->
+
+        <!-- push服务 -->
+        <service
+            android:name="io.rong.push.rongpush.PushService"
+            android:exported="true"
+            android:process="io.rong.push"
+            android:permission="android.permission.BIND_JOB_SERVICE">  <!-- push进程，可以改名 -->
+        </service>
+
+
+        <!-- push 相关事件接收器 -->
+        <receiver
+            android:name="io.rong.push.rongpush.PushReceiver"
+            android:process="io.rong.push">   <!-- 此处进程可以改名，名称需要和PushService所在进程统一 -->
+            <!-- 心跳事件 -->
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT"/>
+            </intent-filter>
+            <!-- 网络变动事件 -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- 部分用户事件 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+
+        <!--必选： SDK 核心功能-->
+
+        <!-- end -->
+
+
+        <receiver
+            android:name=".alarmclock.receiver.AlarmReceiver"
+            android:process=":newinst">
+            <intent-filter>
+                <action android:name="com.pingfly.RING_ALARM" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".alarmclock.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".alarmclock.receiver.WakeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.pingfly.faceclock.wake.gray"/>
+            </intent-filter>
+        </receiver>
+
+
+        <service
+            android:name="com.pingfly.faceclock.alarmclock.service.AlarmRingService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":daemon" />
+
+        <service
+            android:name="com.pingfly.faceclock.alarmclock.service.WakeServiceOne"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":daemon" />
+
+
+        <service
+            android:name=".service.DaemonService"
+            android:enabled="true"
+            android:process=":daemon"
+            android:exported="true">
+        </service>
+
+        <service
+            android:name="com.pingfly.faceclock.alarmclock.service.AlarmRingService$DaemonInnerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!--
+        <service
+            android:name="com.pingfly.faceclock.alarmclock.receiver.WakeReceiver$WakeNotifyService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.pingfly.faceclock.alarmclock.receiver.WakeReceiver$WakeGrayInnerService"
+            android:enabled="true"
+            android:exported="false"/>
+            -->
+
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/NoTitleFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BluetoothCommActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UploadFaceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.Camera2FaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AlarmClockModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AlarmClockNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AlarmClockEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RingSelectActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.activity.CustomRingSetActivity"
+            android:screenOrientation="portrait"
+            android:label="自定义铃声"
+            android:parentActivityName=".ui.activity.RingSetActivity"
+            />
+
+        <activity
+            android:name=".ui.activity.WakeUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <activity
+            android:name=".ui.activity.RecordOperateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecordRenameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecordDeleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecordDeleteBatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecordDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.AlarmHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddAlarmActivity"
+            android:screenOrientation="portrait"
+            android:label="添加闹钟"
+            android:parentActivityName=".ui.activity.AlarmHomeActivity" />
+        <activity
+            android:name=".ui.activity.RingSetActivity"
+            android:screenOrientation="portrait"
+            android:label="选择铃声"
+            android:parentActivityName=".ui.activity.AddAlarmActivity"/>
+
+
+
+        <activity
+            android:name=".ui.activity.MusicModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DeviceStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PostScriptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.InstructionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ResetNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShowBigImageActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

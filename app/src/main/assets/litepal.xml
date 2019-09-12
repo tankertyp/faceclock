@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--
+        <dbname> 标签用于指定数据库名
+        <version> 标签用于指定版本号
+        <list> 标签用于指定所有的映射模型，一对一，一对多，多对一
+    -->
+
+    <dbname value="faceclock"/>
+
+    <version value="2"/>
+
+    <list>
+        <mapping class="com.pingfly.faceclock.db.model.Friend"/>
+        <mapping class="com.pingfly.faceclock.db.model.GroupMember"/>
+        <mapping class="com.pingfly.faceclock.db.model.Groups"/>
+    </list>
+</litepal>
+

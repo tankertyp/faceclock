@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context="com.pingfly.faceclock.ui.activity.AlarmHomeActivity">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <android.support.design.internal.ScrimInsetsFrameLayout
+        android:id="@+id/fl_alam"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </android.support.design.internal.ScrimInsetsFrameLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/iv_add_home"
+        android:fitsSystemWindows="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:backgroundTint="@color/colorAccent"
+        app:rippleColor="#33728dff"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@mipmap/ic_content_add"
+        app:borderWidth="0dp"
+        android:onClick="addAlarm" />
+
+</LinearLayout>

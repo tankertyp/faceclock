@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 获取手机本地的音乐列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pingfly.faceclock.ui.activity.UploadMusicActivity">
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="#0d0c0c"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:orientation="vertical">
+        <com.pingfly.faceclock.MarqueeTextView
+            android:id="@+id/music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+            <com.pingfly.faceclock.MarqueeTextView
+                android:id="@+id/music_Artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center|left"
+                android:paddingStart="5dp"
+                android:textSize="11sp"
+                android:textColor="#ccc"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 点击上传该音乐文件-->
+    <ImageView
+        android:id="@+id/music_menu"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:gravity="center|right"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        app:srcCompat="@mipmap/ic_more_arrow"/>
+
+</LinearLayout>
+
+
+

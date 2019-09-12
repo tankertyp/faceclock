@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_alarm_clock_llyt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray5"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout style="@style/action_llyt">
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            style="@style/action_icon"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            app:srcCompat="@mipmap/ic_action_cancel" />
+
+        <TextView
+            android:id="@+id/action_title"
+            style="@style/action_title" />
+
+        <ImageView
+            android:id="@+id/btnSave"
+            style="@style/action_icon"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            app:srcCompat="@mipmap/ic_action_accept" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_item_llyt">
+                <TextView
+                    android:id="@+id/tvTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <View
+                    style="@style/Line"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <TimePicker
+                    android:id="@+id/tpTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+
+            <!-- 闹钟设置选项 -->
+            <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_item_llyt"
+                android:layout_marginTop="@dimen/option_item_margin_top">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/new_alarm_clock_item"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_option_item">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:singleLine="true"
+                        android:text="@string/repeat"
+                        android:textColor="@color/gray0"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/tvRepeatDescribe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="19dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/repeat_once"
+                        android:textSize="12sp" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/selector_option_item">
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt"
+                       >
+
+                        <ToggleButton
+                            android:id="@+id/tbMonday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/monday"
+                            android:textOn="@string/monday" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbTuesday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/tuesday"
+                            android:textOn="@string/tuesday" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbWednesday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/wednesday"
+                            android:textOn="@string/wednesday"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbThursday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/thursday"
+                            android:textOn="@string/thursday"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbFriday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/friday"
+                            android:textOn="@string/friday"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbSaturday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/saturday"
+                            android:textOn="@string/saturday"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_repeat_days_llyt">
+
+                        <ToggleButton
+                            android:id="@+id/tbSunday"
+                            style="@style/new_alarm_clock_repeat_days_tog_btn"
+                            android:textOff="@string/sunday"
+                            android:textOn="@string/sunday"/>
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <View
+                style="@style/Line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.zhy.autolayout.AutoLinearLayout style="@style/new_alarm_clock_item_llyt">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/new_alarm_clock_item"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_option_item"
+                    android:layout_marginTop="@dimen/option_item_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="19dp"
+                        android:text="@string/tag"
+                        android:textColor="@color/black_text_normal_common"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etTag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="19dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:inputType="text"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:text="@string/alarm_clock"
+                        android:textColor="@color/darkgray"
+                        android:textSize="16sp"
+                        android:autofillHints=""
+                        tools:ignore="LabelFor" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    style="@style/Line"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <!-- 铃声 -->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/llRing"
+                    style="@style/new_alarm_clock_item"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_option_item"
+                    android:layout_marginTop="@dimen/option_item_margin_top">
+
+                    <TextView
+                        style="@style/new_alarm_clock_item_type"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/ring" />
+
+                    <TextView
+                        android:id="@+id/oivRingDescribe"
+                        style="@style/new_alarm_clock_item_describe"
+                        android:layout_marginEnd="6dp"
+                        android:drawableEnd="@mipmap/ic_more_arrow"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxWidth="230dp"
+                        android:singleLine="true"
+                        android:text="@string/default_ring" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <View
+                    style="@style/Line"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    style="@style/new_alarm_clock_item"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/selector_option_item"
+                    android:layout_marginTop="@dimen/option_item_margin_top">
+
+                    <TextView
+                        style="@style/new_alarm_clock_item_type"
+                        android:text="@string/volume" />
+
+                    <SeekBar
+                        android:id="@+id/sbVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:max="15"
+                        android:maxHeight="12dp"
+                        android:minHeight="8dp"
+                        android:progressDrawable="@drawable/seekbar_define_color_style"
+                        android:thumb="@drawable/seekbar_thumb" />
+
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </ScrollView>
+    </com.zhy.autolayout.AutoFrameLayout>
+</com.zhy.autolayout.AutoLinearLayout>
